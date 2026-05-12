@@ -22,6 +22,10 @@
   --shadow-card: 0 4px 24px rgba(255, 103, 0, 0.08);
   --shadow-card-lg: 0 24px 60px rgba(255, 48, 11, 0.15), 0 4px 12px rgba(255, 103, 0, 0.08);
 
+  /* Fonts */
+  --font-primary: var(--font-inter), 'Inter', sans-serif;
+  --font-secondary: var(--font-lora), 'Lora', serif;
+
   /* Radius */
   --radius-sm: 10px;
   --radius-md: 16px;
@@ -36,6 +40,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: inherit;
 }
 
 html {
@@ -46,6 +51,7 @@ body {
   background: var(--grad-page);
   background-attachment: fixed;
   min-height: 100vh;
+  font-family: var(--font-primary);
   color: var(--color-text-primary);
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;

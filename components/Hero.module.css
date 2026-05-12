@@ -231,6 +231,7 @@
 }
 
 .fcTitle {
+  font-family: var(--font-primary);
   font-size: 13px;
   font-weight: 700;
   color: var(--color-text-primary);
@@ -238,6 +239,7 @@
 }
 
 .fcSub {
+  font-family: var(--font-primary);
   font-size: 11px;
   color: var(--color-text-body);
   white-space: nowrap;

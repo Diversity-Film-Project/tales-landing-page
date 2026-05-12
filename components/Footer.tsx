@@ -11,12 +11,7 @@ export default function Footer() {
             </div>
             <p className={styles.tag}>Personalized stories that put your child at the center of the adventure.</p>
           </div>
-          <nav className={styles.links}>
-            <a href="#">Privacy policy</a>
-            <a href="#">Terms of service</a>
-            <a href="#">Support</a>
-            <a href="#">About</a>
-          </nav>
+
         </div>
         <div className={styles.bottom}>
           <span>© 2026 Diversity Film AB · Made with care in Stockholm</span>

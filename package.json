@@ -10,7 +10,8 @@
   "dependencies": {
     "next": "^16.2.6",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "react-qr-code": "^2.0.21"
   },
   "devDependencies": {
     "@types/node": "^20",
