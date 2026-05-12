@@ -1,0 +1,58 @@
+:root {
+  /* Brand gradients */
+  --grad-logo: linear-gradient(135deg, #ff7d00, #ff3023, #ff0084);
+  --grad-primary: linear-gradient(92deg, #ff6700 13.9%, #ff300b 74.85%);
+  --grad-primary-soft: linear-gradient(92deg, rgba(255, 103, 0, 0.85) 13.9%, rgba(255, 48, 11, 0.85) 74.85%);
+  --grad-icon: linear-gradient(158deg, #ff300b -27.14%, #ff6700 73.82%);
+  --grad-page: linear-gradient(to bottom, #ffe8d9 0px, #fffbf7 240px, #fffafa 100%);
+
+  /* Colors */
+  --color-primary: #ff6700;
+  --color-secondary: #ff300b;
+  --color-border: #ffb380;
+  --color-text-primary: #1a1a1a;
+  --color-text-secondary: #403f3f;
+  --color-text-body: #807d7d;
+  --color-bg-soft: #fff5ec;
+  --color-bg-softer: #ffe8d9;
+  --color-card: #ffffff;
+
+  /* Shadows */
+  --shadow-button: 0 0 16px 0 rgba(150, 130, 177, 0.35);
+  --shadow-card: 0 4px 24px rgba(255, 103, 0, 0.08);
+  --shadow-card-lg: 0 24px 60px rgba(255, 48, 11, 0.15), 0 4px 12px rgba(255, 103, 0, 0.08);
+
+  /* Radius */
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
+  --radius-full: 999px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--grad-page);
+  background-attachment: fixed;
+  min-height: 100vh;
+  color: var(--color-text-primary);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 20px;
+}

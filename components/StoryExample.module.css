@@ -1,0 +1,221 @@
+.section {
+  padding: 80px 0;
+  background: linear-gradient(180deg, transparent 0%, #ffefe1 50%, transparent 100%);
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 14px;
+  text-align: center;
+}
+
+.title {
+  font-family: var(--font-lora), serif;
+  font-weight: 600;
+  font-size: clamp(30px, 5vw, 44px);
+  line-height: 1.1;
+  letter-spacing: -0.015em;
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 16px;
+  text-wrap: balance;
+}
+
+.subtitle {
+  text-align: center;
+  color: var(--color-text-secondary);
+  font-size: 17px;
+  line-height: 1.5;
+  max-width: 560px;
+  margin: 0 auto 48px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px;
+  align-items: start;
+}
+
+/* ── Video ── */
+
+.videoWrap {
+  position: relative;
+}
+
+.videoFrame {
+  position: relative;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  background: #1a1a1a;
+  aspect-ratio: 16 / 10;
+  box-shadow: var(--shadow-card-lg);
+  cursor: pointer;
+}
+
+.video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+}
+
+.videoCaption {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  right: 20px;
+  z-index: 3;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 12px;
+  color: white;
+  pointer-events: none;
+}
+
+.videoCapText {
+  font-family: var(--font-lora), serif;
+  font-style: italic;
+  font-size: 16px;
+  font-weight: 500;
+  max-width: 340px;
+  line-height: 1.4;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+}
+
+.videoCapTag {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 6px 12px;
+  border-radius: 99px;
+  font-size: 12px;
+  font-weight: 500;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.videoMeta {
+  text-align: center;
+  margin-top: 20px;
+  color: var(--color-text-body);
+  font-size: 15px;
+}
+
+.videoMeta strong {
+  color: var(--color-text-primary);
+  font-weight: 600;
+}
+
+/* ── Prompt card ── */
+
+.promptCard {
+  background: white;
+  border: 1px solid rgba(255, 179, 128, 0.45);
+  border-radius: var(--radius-xl);
+  padding: 24px 24px 20px;
+  box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.promptHead {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(255, 179, 128, 0.35);
+}
+
+.promptHeadIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: var(--grad-icon);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 6px 16px rgba(255, 48, 11, 0.22);
+}
+
+.promptHeadTitle {
+  font-family: var(--font-lora), serif;
+  font-weight: 600;
+  font-size: 19px;
+  color: var(--color-text-primary);
+  letter-spacing: -0.01em;
+}
+
+.promptHeadSub {
+  font-size: 12px;
+  color: var(--color-text-body);
+  margin-top: 2px;
+}
+
+.promptBody {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.promptBeat {
+  padding-left: 14px;
+  border-left: 2px solid var(--color-border);
+  transition: border-color 0.15s;
+}
+
+.promptBeat:hover {
+  border-left-color: var(--color-primary);
+}
+
+.promptBeatTag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-secondary);
+  margin-bottom: 4px;
+}
+
+.promptBeat p {
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: var(--color-text-secondary);
+}
+
+.promptFoot {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255, 179, 128, 0.35);
+}
+
+.promptChip {
+  background: var(--color-bg-soft);
+  color: var(--color-text-secondary);
+  border: 1px solid rgba(255, 179, 128, 0.45);
+  border-radius: 99px;
+  padding: 4px 10px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+@media (min-width: 1000px) {
+  .grid {
+    grid-template-columns: 1.25fr 1fr;
+    gap: 36px;
+  }
+}

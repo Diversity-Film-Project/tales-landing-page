@@ -1,0 +1,452 @@
+.hero {
+  padding: 56px 0 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+/* ── Left: content ── */
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px 6px 8px;
+  border-radius: var(--radius-full);
+  background: white;
+  border: 1px solid rgba(255, 179, 128, 0.5);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  box-shadow: 0 2px 8px rgba(255, 103, 0, 0.06);
+  margin-bottom: 24px;
+}
+
+.eyebrowPill {
+  background: var(--grad-icon);
+  color: white;
+  font-weight: 700;
+  font-size: 11px;
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+  letter-spacing: 0.04em;
+}
+
+.title {
+  font-family: var(--font-lora), serif;
+  font-weight: 600;
+  font-size: clamp(38px, 7vw, 64px);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: var(--color-text-primary);
+  text-wrap: balance;
+  margin-bottom: 20px;
+}
+
+.title em {
+  font-style: italic;
+  background: var(--grad-logo);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.subtitle {
+  font-size: clamp(16px, 2vw, 19px);
+  line-height: 1.55;
+  color: var(--color-text-secondary);
+  max-width: 520px;
+  margin-bottom: 32px;
+}
+
+.ctaRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.btnPrimary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 16px 28px;
+  border-radius: var(--radius-full);
+  font-family: var(--font-inter), sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  color: white;
+  background: var(--grad-primary);
+  box-shadow: 0 8px 24px rgba(255, 48, 11, 0.28);
+  transition: transform 0.12s, box-shadow 0.12s;
+  white-space: nowrap;
+}
+
+.btnPrimary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(255, 48, 11, 0.38);
+}
+
+.btnSecondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 16px 28px;
+  border-radius: var(--radius-full);
+  font-family: var(--font-inter), sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--color-text-primary);
+  background: white;
+  border: 1.5px solid var(--color-border);
+  box-shadow: 0 2px 8px rgba(255, 103, 0, 0.06);
+  transition: background 0.12s, border-color 0.12s;
+  white-space: nowrap;
+}
+
+.btnSecondary:hover {
+  background: #fff5ec;
+  border-color: var(--color-primary);
+}
+
+/* ── Right: phone mockup ── */
+
+.phoneWrap {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.phoneWrap::before,
+.phoneWrap::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.phoneWrap::before {
+  width: 420px;
+  height: 420px;
+  background: radial-gradient(circle, rgba(255, 103, 0, 0.32), transparent 70%);
+  top: -40px;
+  right: -40px;
+}
+
+.phoneWrap::after {
+  width: 320px;
+  height: 320px;
+  background: radial-gradient(circle, rgba(255, 48, 11, 0.22), transparent 70%);
+  bottom: -20px;
+  left: -20px;
+}
+
+.phone {
+  position: relative;
+  z-index: 2;
+  width: 300px;
+  height: 612px;
+  background: #1a1a1a;
+  border-radius: 46px;
+  padding: 10px;
+  box-shadow:
+    0 50px 100px rgba(255, 48, 11, 0.18),
+    0 20px 40px rgba(0, 0, 0, 0.12),
+    inset 0 0 0 2px rgba(255, 255, 255, 0.04);
+  transform: rotate(-2deg);
+}
+
+.phoneNotch {
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 26px;
+  background: #1a1a1a;
+  border-radius: 14px;
+  z-index: 10;
+}
+
+.phoneScreen {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, #ffe8d9 0px, #fffbf7 60%, #fffafa 100%);
+  border-radius: 36px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Floating cards ── */
+
+.floatCard {
+  position: absolute;
+  background: white;
+  border-radius: 18px;
+  box-shadow: 0 16px 40px rgba(255, 48, 11, 0.18);
+  padding: 12px 16px;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  animation: floaty 6s ease-in-out infinite;
+}
+
+.floatCard1 {
+  top: 60px;
+  left: -20px;
+  animation-delay: -2s;
+}
+
+.floatCard2 {
+  bottom: 80px;
+  right: -30px;
+  animation-delay: -4s;
+}
+
+.fcIcon {
+  width: 36px;
+  height: 36px;
+  border-radius: 12px;
+  background: var(--grad-icon);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.fcTitle {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  white-space: nowrap;
+}
+
+.fcSub {
+  font-size: 11px;
+  color: var(--color-text-body);
+  white-space: nowrap;
+}
+
+@keyframes floaty {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* ── App preview inside phone ── */
+
+.appHeader {
+  padding: 44px 18px 8px;
+  background: linear-gradient(180deg, #ffe8d9 0%, transparent 100%);
+}
+
+.appHeaderRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.appLogo {
+  font-family: var(--font-inter), sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  display: inline-flex;
+  align-items: baseline;
+  background: var(--grad-logo);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.appLogoDot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, oklch(72% 0.2 55), oklch(65% 0.22 30));
+  margin-left: 2px;
+  display: inline-block;
+  align-self: flex-end;
+  margin-bottom: 2px;
+  flex-shrink: 0;
+}
+
+.appInfoIcon {
+  width: 22px;
+  height: 22px;
+  color: var(--color-primary);
+}
+
+.stepLabel {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  margin-bottom: 6px;
+}
+
+.progressTrack {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 8px;
+}
+
+.progressSeg {
+  flex: 1;
+  height: 3px;
+  border-radius: 99px;
+  background: #ffe5d4;
+}
+
+.progressSegActive {
+  background: var(--grad-primary);
+}
+
+.progressLabels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 9px;
+  font-weight: 500;
+  color: var(--color-primary);
+  padding-bottom: 8px;
+}
+
+.appBody {
+  padding: 8px 18px 18px;
+  flex: 1;
+  overflow: hidden;
+}
+
+.appH2 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: 2px;
+}
+
+.appSub {
+  font-size: 11px;
+  color: var(--color-text-body);
+  margin-bottom: 14px;
+}
+
+.uploadCard {
+  border: 1.5px dashed var(--color-border);
+  border-radius: var(--radius-md);
+  background: white;
+  padding: 22px 16px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.uploadIcon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--grad-icon);
+  margin: 0 auto 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.uploadTitle {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: 1px;
+}
+
+.uploadSub {
+  font-size: 10px;
+  color: var(--color-text-body);
+}
+
+.thumb {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: #f3f0ed;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #c5c0bc;
+}
+
+.tipCard {
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  background: white;
+  padding: 10px 12px;
+  margin-bottom: 14px;
+}
+
+.tipTitle {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: 2px;
+}
+
+.tipBody {
+  font-size: 10px;
+  color: var(--color-text-body);
+  line-height: 1.4;
+}
+
+.appBtn {
+  width: 100%;
+  padding: 12px;
+  border-radius: var(--radius-sm);
+  background: var(--grad-primary-soft);
+  color: white;
+  font-family: var(--font-inter), sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  border: none;
+  text-align: center;
+  box-shadow: var(--shadow-button);
+  cursor: pointer;
+}
+
+/* ── Responsive ── */
+
+@media (min-width: 900px) {
+  .hero {
+    padding: 80px 0 120px;
+  }
+
+  .grid {
+    grid-template-columns: 1.05fr 1fr;
+    gap: 64px;
+  }
+
+  .phone {
+    width: 320px;
+    height: 650px;
+  }
+
+  .floatCard1 {
+    left: -50px;
+  }
+
+  .floatCard2 {
+    right: -50px;
+  }
+}
